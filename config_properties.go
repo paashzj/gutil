@@ -49,14 +49,18 @@ func (c *ConfigProperties) Set(key, val string) {
 
 func (c *ConfigProperties) SetBool(key string, val bool) {
 	if val {
-		c.properties[key] = "false"
-	} else {
 		c.properties[key] = "true"
+	} else {
+		c.properties[key] = "false"
 	}
 }
 
 func (c *ConfigProperties) SetInt(key string, val int) {
 	c.properties[key] = strconv.Itoa(val)
+}
+
+func (c *ConfigProperties) SetInt32(key string, val int32) {
+	c.properties[key] = strconv.Itoa(int(val))
 }
 
 func (c *ConfigProperties) SetInt64(key string, val int64) {
