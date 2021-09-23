@@ -47,6 +47,14 @@ func (c *ConfigProperties) Set(key, val string) {
 	c.properties[key] = val
 }
 
+func (c *ConfigProperties) SetBool(key string, val bool) {
+	if val {
+		c.properties[key] = "false"
+	} else {
+		c.properties[key] = "true"
+	}
+}
+
 func (c *ConfigProperties) SetInt(key string, val int) {
 	c.properties[key] = strconv.Itoa(val)
 }
