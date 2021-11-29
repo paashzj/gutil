@@ -68,7 +68,7 @@ func (c *ConfigProperties) SetInt64(key string, val int64) {
 }
 
 func (c *ConfigProperties) Write(dstFile string) error {
-	file, err := os.OpenFile(dstFile, os.O_RDWR|os.O_CREATE|os.O_TRUNC, os.FileMode(0666))
+	file, err := os.OpenFile(dstFile, os.O_RDWR|os.O_CREATE|os.O_TRUNC, os.FileMode(0640))
 	if err != nil {
 		return err
 	}

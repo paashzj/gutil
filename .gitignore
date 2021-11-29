@@ -9,3 +9,6 @@ target/*
 
 # 编译后程序 Windows
 **.exe
+
+# test case gen file
+config_yaml_test_gen.yaml
